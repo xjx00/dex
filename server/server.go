@@ -30,6 +30,7 @@ import (
 	"github.com/dexidp/dex/connector/authproxy"
 	"github.com/dexidp/dex/connector/bitbucketcloud"
 	"github.com/dexidp/dex/connector/gitea"
+	"github.com/dexidp/dex/connector/gitee"
 	"github.com/dexidp/dex/connector/github"
 	"github.com/dexidp/dex/connector/gitlab"
 	"github.com/dexidp/dex/connector/google"
@@ -535,6 +536,7 @@ var ConnectorsConfig = map[string]func() ConnectorConfig{
 	"mockPassword":    func() ConnectorConfig { return new(mock.PasswordConfig) },
 	"ldap":            func() ConnectorConfig { return new(ldap.Config) },
 	"gitea":           func() ConnectorConfig { return new(gitea.Config) },
+	"gitee":           func() ConnectorConfig { return new(gitee.Config) },
 	"github":          func() ConnectorConfig { return new(github.Config) },
 	"gitlab":          func() ConnectorConfig { return new(gitlab.Config) },
 	"google":          func() ConnectorConfig { return new(google.Config) },
